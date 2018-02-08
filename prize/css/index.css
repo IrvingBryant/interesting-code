@@ -1,0 +1,658 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  width: 7.2rem;
+  height: 16.2rem;
+  background-image: url('../images/bg.jpg');
+  background-size: 100% 100%;
+}
+
+.header {
+  width: 7.2rem;
+  height: 6.3rem;
+}
+
+.main .header p {
+  position: absolute;
+  left: 4.86rem;
+  top: 5.7rem;
+  width: 2.34rem;
+  height: .62rem;
+  background-image: url('../images/details.png');
+  background-size: 100% 100%;
+  text-align: center;
+  line-height: .52rem;
+  color: #fff5eb;
+}
+
+.body {
+  width: 7.2rem;
+  height: 9.96rem;
+}
+
+.body #myprize {
+  width: 2.2rem;
+  height: .5rem;
+  position: absolute;
+  left: 2.42rem;
+  top: 7.2rem;
+  /*border:1px solid red;*/
+}
+
+.body #luck table {
+  display: table;
+  /*此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。*/
+  border-collapse: collapse;
+}
+
+.body #luck tbody {
+  vertical-align: middle;
+  display: table-row-group;
+}
+
+.body #luck tr {
+  display: table-row;
+  vertical-align: inherit;
+  /*vertical-align 属性设置元素的垂直对齐方式。*/
+}
+
+.body #luck td {
+  width: 1.4rem;
+  height: 1.26rem;
+  z-index: 1;
+  display: table-cell;
+  vertical-align: inherit;
+  background-image: url("../images/probg.png");
+  background-size: 100% 100%;
+  text-align: center;
+  color: #663d00;
+  padding: .1rem .04rem .1rem .04rem;
+}
+
+.body #luck .thanks p {
+  font-family: "Adobe Heiti Std";
+  color: rgb(216, 107, 0);
+  margin-top: -.2rem;
+}
+
+.body #luck .cjBtn {
+  background-image: url("../images/once-play.png");
+}
+
+.body #luck td img {
+  height: .8rem;
+  display: block;
+}
+
+.main .body table {
+  position: absolute;
+  top: 7.8rem;
+  left: 0.58rem;
+}
+
+.atcveTime {
+  color: #4e2c07;
+  position: absolute;
+  top: 14.18rem;
+  left: 2.42rem;
+}
+
+.footer {
+  width: 2.83rem;
+  height: .73rem;
+  position: absolute;
+  left: 2.08rem;
+  top: 14.94rem;
+  background-image: url('../images/share.png');
+  background-size: 100% 100%;
+  font-family: "Adobe Heiti Std";
+  color: rgb(7, 10, 10);
+  line-height: .73rem;
+  text-align: center;
+}
+/* 适配不同dpr的字体的像素 */
+
+[data-dpr='1'] .header p {
+  font-size: 13px;
+}
+
+[data-dpr='2'] .header p {
+  font-size: 26px;
+}
+
+[data-dpr='3'] .header p {
+  font-size: 39px;
+}
+
+[data-dpr='1'] .luck-unit {
+  font-size: 10px;
+}
+
+[data-dpr='2'] .luck-unit {
+  font-size: 20px;
+}
+
+[data-dpr='3'] .luck-unit {
+  font-size: 30px;
+}
+
+[data-dpr="1"] .thanks {
+  font-size: 13px;
+}
+
+[data-dpr="2"] .thanks {
+  font-size: 26px;
+}
+
+[data-dpr="3"] .thanks {
+  font-size: 39px;
+}
+
+[data-dpr="1"] .atcveTime {
+  font-size: 12px;
+}
+
+[data-dpr="2"] .atcveTime {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .atcveTime {
+  font-size: 36px;
+}
+
+[data-dpr="1"] .footer {
+  font-size: 16px;
+}
+
+[data-dpr="2"] .footer {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .footer {
+  font-size: 48px;
+}
+
+[data-dpr="1"] .no_gob_content span {
+  font-size: 18px;
+}
+
+[data-dpr="2"] .no_gob_content span {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .no_gob_content span {
+  font-size: 54px;
+}
+
+.body #luck .cuttren {
+  background-image: url('../images/probghl.png');
+  border-radius: .04rem;
+  background-size: 100% 100%;
+}
+
+.body #luck .luck-unit-0 img {
+  margin-left: .17rem;
+  width: .9rem;
+  height: .8rem;
+}
+
+.body #luck .luck-unit-1 img {
+  width: .78rem;
+  height: .80rem;
+  margin-left: .32rem;
+}
+
+.luck-unit-2 img {
+  margin-left: .085rem;
+}
+
+.luck-unit-8 img {
+  width: 1.16rem;
+  height: .56rem;
+  margin-left: .12rem;
+}
+
+.body #luck .luck-unit-4 img {
+  height: .73rem;
+  margin-left: .13rem;
+}
+
+.body #luck .luck-unit-11 img {
+  height: .78rem;
+  margin-left: .26rem;
+}
+
+.body #luck .luck-unit-10 img {
+  margin-left: .24rem;
+  height: .88rem;
+}
+
+.luck-unit-5 img {
+  margin-left: .2rem;
+}
+
+.body #luck .luck-unit-6 img {
+  height: .65rem;
+  margin-left: .4rem;
+  margin-top: -0.1rem;
+}
+
+.body #luck .luck-unit-7 img {
+  height: .65rem;
+  margin-left: .2rem;
+  margin-top: -0.1rem;
+}
+
+.shadow2,
+.shadow3,
+.shadow {
+  width: 7.2rem;
+  height: 16.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 200;
+}
+
+.bgShadow {
+  background: black;
+  width: 7.2rem;
+  height: 16.2rem;
+  opacity: .7;
+}
+
+.shadow .no_god {
+  width: 5.86rem;
+  height: 5.66rem;
+  background-image: url('../images/no_god.png');
+  background-size: 100% 100%;
+  position: absolute;
+  top: 3.5rem;
+  left: .67rem;
+}
+
+.close {
+  width: .48rem;
+  height: .48rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.no_gob_content {
+  width: 2.77rem;
+  height: 2.5rem;
+  background-image: url('../images/god_content.png');
+  background-size: 100% 100%;
+  display: block;
+  margin-left: 1rem;
+  margin-top: 2.2rem;
+  text-align: center;
+}
+
+.no_gob_content span {
+  display: inline-block;
+  transform: rotate(-8.5deg);
+  /*只有块级元素可以旋转*/
+  -ms-transform: rotate(-8.5deg);
+  /* IE 9 */
+  -moz-transform: rotate(-8.5deg);
+  /* Firefox */
+  -webkit-transform: rotate(-8.5deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-8.5deg);
+  /* Opera */
+  margin-top: .6rem;
+  margin-left: -0.2rem;
+  font-family: "Adobe Heiti Std";
+  color: rgb(201, 26, 24);
+}
+
+.no_gob_btn {
+  width: 2.1rem;
+  height: .86rem;
+  position: absolute;
+  left: 1.4rem;
+
+  top: 3.60rem;
+}
+
+[data-dpr='1'] .fortsetzen {
+  font-size: 16px;
+}
+
+[data-dpr='2'] .fortsetzen {
+  font-size: 32px;
+}
+
+[data-dpr='3'] .fortsetzen {
+  font-size: 48px;
+}
+
+[data-dpr='1'] .title {
+  font-size: 20px;
+}
+
+[data-dpr='2'] .title {
+  font-size: 40px;
+}
+
+[data-dpr='3'] .title {
+  font-size: 60px;
+}
+
+.fortsetzen {
+  display: inline-block;
+  font-family: "Adobe Heiti Std";
+  color: #ffffff;
+  transform: rotate(-8.5deg);
+  /*只有块级元素可以旋转*/
+  -ms-transform: rotate(-8.5deg);
+  /* IE 9 */
+  -moz-transform: rotate(-8.5deg);
+  /* Firefox */
+  -webkit-transform: rotate(-8.5deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-8.5deg);
+  /* Opera */
+  position: absolute;
+  left: 1.8rem;
+  top: 3.72rem;
+}
+
+.title {
+  display: inline-block;
+  font-family: "Adobe Heiti Std";
+  color: #feebc0;
+  transform: rotate(-8.5deg);
+  /*只有块级元素可以旋转*/
+  -ms-transform: rotate(-8.5deg);
+  /* IE 9 */
+  -moz-transform: rotate(-8.5deg);
+  /* Firefox */
+  -webkit-transform: rotate(-8.5deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-8.5deg);
+  /* Opera */
+  position: absolute;
+  left: 1.4rem;
+  top: 1.7rem;
+  z-index: 200;
+}
+
+{
+  width: 7.2rem;
+  height: 16.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 200;
+}
+
+.shadow3 {
+  z-index: 100;
+}
+
+.god {
+  width: 6.06rem;
+  height: 5.95rem;
+  background-image: url("../images/god.png");
+  background-size: 100% 100%;
+  position: absolute;
+  top: 3.24rem;
+  left: .57rem;
+}
+
+.shadow2 .title {
+  top: 1.5rem;
+  left: 1.6rem;
+}
+
+.god_content {
+  width: 2.77rem;
+  height: 2.6rem;
+  background-image: url('../images/god_content.png');
+  background-size: 100% 100%;
+  position: absolute;
+  left: 1.2rem;
+  top: 2rem;
+}
+
+.god_content p {
+  transform: rotate(-8.5deg);
+  /*只有块级元素可以旋转*/
+  -ms-transform: rotate(-8.5deg);
+  /* IE 9 */
+  -moz-transform: rotate(-8.5deg);
+  /* Firefox */
+  -webkit-transform: rotate(-8.5deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-8.5deg);
+  /* Opera */
+  margin-left: .2rem;
+  /* margin-top: .1rem; */
+  padding: .1rem .24rem .1rem .3rem;
+}
+
+[data-dpr='1'] .wintitle {
+  font-size: 12px;
+}
+
+[data-dpr='2'] .wintitle {
+  font-size: 24px;
+}
+
+[data-dpr='3'] .wintitle {
+  font-size: 36px;
+}
+
+[data-dpr='1'] .godName {
+  font-size: 15px;
+}
+
+[data-dpr='2'] .godName {
+  font-size: 30px;
+}
+
+[data-dpr='3'] .godName {
+  font-size: 45px;
+}
+
+[data-dpr='1'] .info {
+  font-size: 10px;
+}
+
+[data-dpr='2'] .info {
+  font-size: 20px;
+}
+
+[data-dpr='3'] .info {
+  font-size: 30px;
+}
+
+[data-dpr='1'] .godName {
+  border-bottom: 1px dashed #d2aa55;
+  font-size: 15px;
+}
+
+[data-dpr='2'] .godName {
+  border-bottom: 1px dashed #d2aa55;
+  font-size: 30px;
+}
+
+[data-dpr='3'] .godName {
+  border-bottom: 1px dashed #d2aa55;
+  font-size: 45px;
+}
+
+.god_content .wintitle {
+  color: #ca1a1a;
+  padding: .2rem 0 0 .1rem;
+}
+
+.god_content .godName {
+  color: #c91a17;
+  width: 2rem;
+  padding: .1rem 0rem .1rem .15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info {
+  color: #613510;
+}
+
+.infoBtn {
+  background-image: url('../images/infoBtn.png');
+  width: 2.78rem;
+  height: .68rem;
+  text-align: center;
+  line-height: .68rem;
+  position: absolute;
+  left: 50%;
+  top: 5.8rem;
+  margin-left: -1.39rem;
+  background-size: 100% 100%;
+  color: #6e350a;
+}
+
+[data-dpr='1'] .infoBtn {
+
+  font-size: 13px;
+}
+
+[data-dpr='2'] .infoBtn {
+  font-size: 26px;
+}
+
+[data-dpr='3'] .infoBtn {
+  font-size: 39px;
+}
+
+.close2 {
+  background-image: url('../images/close.png');
+  width: .48rem;
+  height: .48rem;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: -.6rem;
+}
+
+[data-dpr='1'] .timeRange {
+
+  font-size: 10px;
+}
+
+[data-dpr='2'] .timeRange {
+  font-size: 20px;
+}
+
+[data-dpr='3'] .timeRange {
+  font-size: 30px;
+}
+
+.timeRange {
+  color: #ffffff;
+  transform: rotate(-8.5deg);
+  /*只有块级元素可以旋转*/
+  -ms-transform: rotate(-8.5deg);
+  /* IE 9 */
+  -moz-transform: rotate(-8.5deg);
+  /* Firefox */
+  -webkit-transform: rotate(-8.5deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-8.5deg);
+  /* Opera */
+  margin-left: .6rem;
+  margin-top: -.1rem;
+}
+
+[data-dpr='1'] .cjBtn p {
+  font-size: 9px;
+}
+
+[data-dpr='2'] .cjBtn p {
+  font-size: 18px;
+}
+
+[data-dpr='3'] .cjBtn p {
+  font-size: 27px;
+}
+
+.cjBtn p {
+  color: #cb5e00;
+  margin-top: 1.2rem;
+}
+
+.cjBtn p span {
+  color: #ed0000;
+}
+
+.myprizeShadow {
+  width: 6.2rem;
+  height: 8.68rem;
+  position: absolute;
+  left: 50%;
+  top: 2.5rem;
+  margin-left: -3.1rem;
+  background-image: url('../images/myprize.jpg');
+  background-size: 100% 100%;
+}
+
+.myprizeShadow .shadow3body {
+  /* margin-left: .76rem; */
+  width: 5.38rem;
+  height: 6rem;
+  margin-top: 1.85rem;
+  /* background: #ffffff; */
+  margin-left: .4rem;
+  overflow: auto;
+  /*超出时显现滚动条*/
+}
+
+.myprizeShadow .shadow3body p {
+  width: 4.66rem;
+  height: .8rem;
+  line-height: .8rem;
+  border-bottom: .01rem dashed #dda16d;
+  padding-left: .36rem;
+  padding: .15rem;
+  padding-right: 0rem;
+}
+
+.myprizeShadow .shadow3body p span {
+  background: #a9520b;
+  color: #ffffff;
+  height: .5rem;
+  width: 1.22rem;
+  float: right;
+  text-align: center;
+  line-height: .5rem;
+  margin-top: .145rem;
+  border-radius: .34rem;
+}
+
+.shadow3Footer {
+  width: 3.6rem;
+  height: .56rem;
+  text-align: center;
+  line-height: .56rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.8rem;
+  color: #a9520b;
+}
+
+.shadow3Close {
+  width: .48rem;
+  height: .48rem;
+  position: absolute;
+  left: 6.25rem;
+  top: 1.6rem;
+}

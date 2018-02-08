@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>免费抽奖活动</title>
+  <script src="js/fixScreen720.js" type="text/javascript"></script>
+  <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/index.css"/>
+</head>
+
+<body>
+  <div class="main">
+    <div class='header'>
+      <p>点击查看详情</p>
+    </div>
+    <div class="body">
+      <p id="myprize"></p>
+      <!--按钮我的奖品-->
+      <div id="luck">
+        <!-- luck -->
+        <table>
+          <tbody>
+            <tr>
+              <td class="luck-unit luck-unit-0 cuttren"><img src="images/1.png"><span>5-100元和包券</span></td>
+              <td class="luck-unit luck-unit-1"><img src="images/2.png"><span>明星签名照</span></td>
+              <td class="luck-unit luck-unit-2"><img src="images/4.jpg"><span>天天向上门票</span></td>
+              <td class="luck-unit luck-unit-3 thanks">
+                <p>谢谢参与</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="luck-unit luck-unit-11"><img src="images/11.png"><span>北欧欧慕电饭煲</span></td>
+              <td rowspan="2" colspan="2" class="cjBtn" id="btn">
+                <p>您还有<span class='rollNumber'></span>次机会</p>
+              </td>
+              <!--rowspan colspan 表示合并行列-->
+              <td class="luck-unit luck-unit-4"><img src="images/5.png"><span>美的电烤箱</span></td>
+            </tr>
+            <tr>
+              <td class="luck-unit luck-unit-10"><img src="images/10.png"><span>飞科折叠电吹风</span></td>
+              <td class="luck-unit luck-unit-5"><img src="images/6.png"><span>御泥坊大礼包</span></td>
+            </tr>
+            <tr>
+              <td class="luck-unit luck-unit-9 thanks">
+                <p>谢谢参与</p>
+              </td>
+              <td class="luck-unit luck-unit-8"><img src="images/9.png"><span>优酷7天会员</span></td>
+              <td class="luck-unit luck-unit-7"><img src="images/8.png"><span>聚U惠50元代金券</span></td>
+              <td class="luck-unit luck-unit-6"><img src="images/7.png"><span>唯品会1111元品牌红包</span></td>
+            </tr>
+        </table>
+        </tbody>
+      </div>
+      <!-- luckEnd -->
+      <p class="atcveTime">活动时间：2017.11.11</p>
+    </div>
+    <div class="footer">立即分享</div>
+  </div>
+  <div class="shadow">
+    <p class="bgShadow"></p>
+    <p class="no_god"><span class='title'>很抱歉!</span>
+      <span class="no_gob_content"><span>什么都没抽中</span></span>
+      <img src="images/close.png" alt="cloes" class="close">
+      <img src="images/no_gob_btn.png" alt="btn" class="no_gob_btn">
+      <span class="fortsetzen no_gob_btn">再接再厉</span>
+    </p>
+  </div>
+  <div class="shadow2">
+    <div class="bgShadow"></div>
+    <div class="god">
+      <p class='title'>恭喜您！</p>
+      <div class="god_content">
+        <p class="wintitle">抽中</p>
+        <p class="godName">美的电烤箱</p>
+        <p class="info">我司工作人员将在10个工作日内向您的默认收货地址邮寄，届时请留意您的物流信息</p>
+        <div class="timeRange">仅限11月11日-13日使用</div>
+      </div>
+      <div class="infoBtn">点我填写收货地址</div>
+      <div class="close2"></div>
+
+    </div>
+
+  </div>
+  <div class="shadow3">
+    <div class='bgShadow'></div>
+    <img src="images/close.png" alt="我的奖品关闭按钮" class="shadow3Close">
+    <div class='myprizeShadow'>
+      <div class='shadow3body'>
+        <p>电子券50元电子券 <span>点击查看</span></p>
+        <p>明星签名照 <span>立即领取</span></p>
+        <p>优酷7天会员 <span>点击查看</span></p>
+        <p>美的电烤箱 <span>立即领取</span></p>
+        <p>飞科折叠电吹风 <span>立即领取</span></p>
+        <p>飞科折叠电吹风 <span>立即领取</span></p>
+        <p>飞科折叠电吹风 <span>立即领取</span></p>
+        <p>飞科折叠电吹风 <span>立即领取</span></p>
+      </div>
+      <div class="shadow3Footer">奖品领取有限期至2017年x月x日</div>
+    </div>
+  </div>
+  <script src="js/index.js" type='text/javascript'></script>
+</body>
+
+</html>
