@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面编码集(中文编码<gbk,gb2312>,国际编码<utf-8>)-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="关键词,关键词">
+		<meta name="description" content="">
+		<title> html </title>
+        <style type="text/css">
+		    #box{width:400px;height:300px;border:1px solid #FFA35B;margin:100px auto 0;
+        text-align:center;color:#666;position:relative;}
+        #no2{position:absolute;top:40px;right:10px;}
+        #no3{position:absolute;top:60px;left:10px;}
+        #no4{position:absolute;top:230px;right:25px;}
+        #no5{margin-left:640px;margin-top:20px;}
+        #no{margin-left:20px;}
+ </style>
+	</head>
+<body>
+    <div id="box">
+      <h2>你是不是对呵呵有意思？</h2><br/><br/><br/><br/>
+      <input type="submit" value="是" id="yes"/>
+      <input type="submit" value="不是" id="no"/><br/><br/><br/>
+      <input type="hidden" value="不是" id="no1" />
+      <input type="hidden" value="不是" id="no2" />
+      <input type="hidden" value="不是" id="no3" />
+      <input type="hidden" value="不是" id="no4" />
+    </div>
+    <input type="hidden" value="不是" id="no5" />
+    <script>
+      var oyes=document.getElementById("yes");
+      var ono=document.getElementById("no");
+      var ono1=document.getElementById("no1");
+      var ono2=document.getElementById("no2");
+      var ono3=document.getElementById("no3");
+      var ono4=document.getElementById("no4");
+      var ono5=document.getElementById("no5");
+      //var oinput=document.getElementByTagName("input");
+      ono.onmouseover=function(){
+         alert("咦，你点不到我！");
+         this.setAttribute("type","hidden");
+         ono1.setAttribute("type","submit");
+         ono1.onmouseover=function(){
+           this.setAttribute("type","hidden");
+           ono2.setAttribute("type","submit");
+          ono2.onmouseover=function(){
+                ono2.setAttribute("type","hidden");
+						    ono3.setAttribute("type","submit");
+            ono3.onmouseover=function(){
+                //ono3.setAttribute("type","submit");
+                ono3.setAttribute("type","hidden");
+                ono4.setAttribute("type","submit");
+              ono4.onmouseover=function(){
+	                ono4.setAttribute("type","hidden");
+	                ono5.setAttribute("type","submit");
+                ono5.onmouseover=function(){
+                   ono5.setAttribute("type","hidden");
+                  a();
+                  }
+               }
+            }
+        }
+      }
+      }
+     function a(){
+       alert("看你去哪里找我！拜拜，笨蛋")
+    }
+     oyes.onclick=function(){
+          alert("看来天注定我们两要在一起");
+       }
+</script>
+ </body>
+ </html>
