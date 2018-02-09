@@ -11,7 +11,7 @@ var canvas = document.querySelector('#canvas'),
         halfHeight;
 
     ctx.textBaseline = "top";
-    ctx.fillStyle = "#fff";
+    ctx.fillStyle = "red";
 
     var rafId = null, finishCount = 0, isInput = false;
 
@@ -40,7 +40,7 @@ var canvas = document.querySelector('#canvas'),
       timer=setInterval(function(){
           if(i<=0){
             clearInterval(timer);
-            // window.location.href = "http://baidu.com";
+            window.location.href = "http://htmlpreview.github.io/?https://github.com/IrvingBryant/learngit/blob/master/particle/indextwo.html";
           }else{
            i--
            document.querySelector('#txt').value =i
