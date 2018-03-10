@@ -40,7 +40,7 @@ var canvas = document.querySelector('#canvas'),
       timer=setInterval(function(){
           if(i<=0){
             clearInterval(timer);
-            window.location.href = "http://htmlpreview.github.io/?https://github.com/IrvingBryant/learngit/blob/master/particle/indextwo.html";
+            window.location.href = "http://htmlpreview.github.io/?https://github.com/IrvingBryant/learngit/blob/master/ouYang1/indextwo.html";
           }else{
            i--
            document.querySelector('#txt').value =i
