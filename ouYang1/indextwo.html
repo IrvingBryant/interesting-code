@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>逐字打印</title>
+  <script type='text/javascript'></script>
+  <script src="./js/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="./js/fixScreen720.js" type="text/javascript"></script>
+  <style type='text/css'>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .body {
+      width: 7.2rem;
+      height: 12.8rem;
+      background-image: url("img/bgi3.jpg");
+      background-size: 100% 100%;
+    }
+
+    #bodyContent #titeContent {
+      width: 6rem;
+      height: 2em;
+      line-height: 2em;
+      font-size: .44rem;
+
+    }
+
+    #bodyContent {
+      width: 6rem;
+      height: 5rem;
+      margin-left: .6rem;
+      position: absolute;
+      margin-top: 2rem;
+      /* color: rgba(254, 254, 254, 0.7); */
+      color:rgba(200, 44, 44, 0.9);
+      font-size: .36rem;
+      /* display: block; */
+    }
+
+    #bodyContent #textContent {
+      text-indent: 2em;
+      font-size: .4rem;
+      line-height: .56rem;
+    }
+
+    #bodyContent #footerContent {
+        font-size: .44rem;
+      position: absolute;
+      left: 2.2rem;
+      top: 6.6rem;
+    }
+    #bodyContentTwo{
+      width: 7.2rem;
+      height:5rem;
+      position: absolute;
+      top:1.6rem;
+      display: none;
+    }
+    #bodyContentTwo h5{
+      text-align: center;
+      font-size: .48rem;
+      color: rgb(107, 95, 95);
+    }
+    #bodyContentTwo #yes,.no{
+      width: 1.2rem;
+      height:.6rem;
+      border-radius: .08rem;
+      background:rgb(159, 159, 159);
+      position:absolute;
+      top:4rem;
+      left:1.8rem;
+      text-align: center;
+      line-height: .6rem;
+      color: #fff;
+    }
+    .no{
+      position:absolute;
+      left:4rem;
+    }
+  #bodyContentTwo .no1{
+     /* position:absolute; */
+     left:4.2rem;
+     top:4rem;
+   }
+ .ansConten{
+   width: 5.2rem;
+   margin-left: 1rem;
+   font-size: .36rem;
+   text-indent: 2em;
+   padding-top: .5rem;
+   line-height: .5rem;
+   color: rgba(91, 91, 91, 1);
+ }
+  </style>
+</head>
+
+<body>
+  <div class='body'>
+    <div id='bodyContent'>
+      <div id="titeContent"></div>
+      <div id="textContent"></div>
+      <div id="footerContent"></div>
+    </div>
+    <div id="bodyContentTwo">
+          <h5>请答题</h5>
+          <div class="ansConten">要不要给我一个么么哒呀</div>
+          <div id="yes">YES</div>
+          <div class="no no1">NO</div>
+    </div>
+  </div>
+  <script>
+    window.onload = function() {
+      var content = $("#textContent"),
+        titContent = $("#titeContent"),
+        footerContent = $("#footerContent");
+      var titeTxt = "蒋亮小朋友:";
+      var text = "与你一见如故，是我今生最美丽的相遇，如果说天上人间有什么值得我歌颂，那是因为遇见了你，才会变得如此不同。你看，精神上都这么喜欢你了，如果不想睡你的话，感觉对的肉体特别不尊敬。";
+      var footerTxt = "猴头";
+      // var titeTxt = " ";
+      // var text =  " ";
+      // var footerTxt = "asdnsuiahduis";
+
+      var i = 0,
+        timer, timerTwo;
+
+      function Input(obj, txt) {
+        if (i >= txt.length) {
+          obj.html(txt);
+          clearInterval(timer);
+          i = 0;
+          timer = setInterval(
+            function() {
+              Input(content, text);
+              if (i >= text.length) {
+                content.html(text);
+                clearInterval(timer);
+                i = 0;
+                timer = setInterval(function() {
+                  Input(footerContent, footerTxt)
+                  if (i >= footerTxt.length) {
+                    footerContent.html(footerTxt);
+                    clearInterval(timer);
+                    setTimeout(function(){  //两秒后页面跳转
+                      console.log("abcd")
+                      $("#bodyContent").fadeOut(3000);
+                      $("#bodyContentTwo").fadeIn(3000);
+                    },2000)
+                  }
+                }, 400)
+              }
+            }, 200);
+        } else {
+          i++;
+          obj.html(txt.slice(0, i) + "_");
+        }
+      }
+
+      console.log(i)
+      timer = setInterval(
+        function() {
+          Input(titContent, titeTxt)
+        }, 500);
+
+
+     // click 问答 Start
+     var no=$(".no1");
+     var clickTime=0;
+
+     no.click(function(){
+       randomY=Math.ceil(Math.random()*100)/10
+       randomX=Math.ceil(Math.random()*100)/10
+       console.log(randomX ,randomY)
+       console.log(clickTime)
+       clickTime++;
+       if(clickTime < 2){
+        alert("To chase me!");
+         if(randomX>6){
+          randomX=randomX/2
+          no.animate({left:randomX+"rem",top:randomY+"rem"});
+        }else{
+          no.animate({left:randomX+"rem",top:randomY+"rem"});
+        }
+      }else{
+          if(clickTime > 4){  //设置最小点击次数
+            randomX=randomX-5;
+            no.animate({left:randomX+"rem",top:randomY+"rem"});
+            if(randomX+1.2<0){
+              $('#yes').animate({left:"3rem"});
+              $('#yes').css("background","rgba(218, 66, 67, 0.91)")
+            }
+          }else{
+              if(randomX>6){
+               randomX=randomX/2
+               no.animate({left:randomX+"rem",top:randomY+"rem"});
+             }else{
+               no.animate({left:randomX+"rem",top:randomY+"rem"});
+             }
+           }
+        }
+     });
+
+     $("#yes").click(function(){
+       alert("么么哒~^o^~");
+     });
+    }
+  </script>
+</body>
+
+</html>
