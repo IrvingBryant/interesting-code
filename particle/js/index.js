@@ -28,7 +28,7 @@ var canvas = document.querySelector('#canvas'),
     });
     var clickTime=0, //点击次数
         splitCount=0,
-        content="新年快乐万事如意阖家幸福财源广进",
+        content="蠢婆渣渣我是猴头惊不惊喜意不意外",
         lastsplitCount=0,
         timer,
         i=6;
@@ -74,7 +74,7 @@ var canvas = document.querySelector('#canvas'),
     function init(){
         var s = 0;
         var input = document.querySelector('#txt');
-        var l = input.value ? input.value : 'Hi周何芳';
+        var l = input.value ? input.value : 'hi 蠢婆';
         input.value = "";
 
         if(rafId) cancelAnimationFrame(rafId);
