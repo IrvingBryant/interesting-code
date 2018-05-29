@@ -28,7 +28,7 @@ var canvas = document.querySelector('#canvas'),
     });
     var clickTime=0, //点击次数
         splitCount=0,
-        content="小洪紫琦想不到吧惊不惊喜意不意外",
+        content="小魏无羡想不到吧惊不惊喜意不意外",
         lastsplitCount=0,
         timer,
         i=6;
