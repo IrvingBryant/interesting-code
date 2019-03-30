@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>基于canvas的粒子组成文字动画特效|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+</head>
+<style>
+  #box {
+    position: fixed;
+    top: 0%;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    /* background: red; */
+    background-image:url('./assets/img/img.gif') ;
+    background-size:100% 100%;
+    border-radius: 50%; 
+    /* opacity: 0.5; */
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  #sss:hover {
+    left: 200px;
+  }
+</style>
+
+<body>
+  <!-- COIDEA:header START -->
+  <!-- <header class="coidea-header">
+      <div class="coidea-links">
+        <a class="coidea-icon-back" href="http://www.htmleaf.com/html5/html5-canvas/201902115518.html" title="返回下载页">C</a>
+        <a class="coidea-icon-github" href="http://www.htmleaf.com/" target="_blank" title="jQuery之家">G</a>
+      </div>
+    </header> -->
+  <!-- COIDEA:header END -->
+
+  <!-- COIDEA:demo START -->
+  <section id="ci-particles">
+    <canvas id="canvas"></canvas>
+    <h1 id="headline">hey丁素娟</h1>
+    <img id="box"></img>
+  </section>
+
+  <!-- COIDEA:demo END -->
+
+  <script src="assets/js/demo.js"></script>
+  <script>
+    var textArray = ['明天=.=','加油呦','(ง๑ •̀_•́)ง ','晚安','（=ˇωˇ=）'];
+    var i = 0,
+    imgTimer=null,
+    timer=null ,
+    flag=false;
+    function amin(){
+      let maxWidth = window.innerWidth,
+      maxHeight = window.innerHeight;
+      console.log('maxWidth',maxWidth)
+      console.log('maxHeight',maxHeight)
+      var dom = document.getElementById('box')
+      clearInterval(imgTimer)
+      imgTimer=setInterval(()=>{
+      var randomLeft=Math.random()*1000,
+      randomTop=Math.random()*1000;
+      dom.style.opacity=1
+        if(randomLeft>maxWidth){
+          dom.style.left=maxWidth+100+"px"
+        }else{
+          dom.style.left=randomLeft+"px"
+        }
+        if(randomTop>maxHeight){
+          dom.style.top=maxHeight+100+"px"
+        }else{
+          dom.style.top=randomTop+"px"
+        }
+      },1000)
+
+    }
+    window.onload=function(){
+      initScene('hey丁素娟')
+      timer = setInterval(() => {
+        if (i > textArray.length - 1) {
+          flag=true
+          clearInterval(timer)
+          amin()
+          return
+        }
+        initScene(textArray[i])
+        i++
+      }, 5000);
+    }
+    window.addEventListener("resize",function(){
+      initScene('ლ(╹◡╹ლ)')
+      if(flag){
+        amin()
+      }
+    })
+  </script>
+</body>
+
+</html>
