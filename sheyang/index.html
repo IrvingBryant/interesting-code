@@ -200,8 +200,8 @@
       var dom = document.getElementById('box')
       clearInterval(imgTimer)
       imgTimer=setInterval(()=>{
-      var randomLeft=Math.random()*1000,
-      randomTop=Math.random()*1000;
+      var randomLeft=Math.random()*800,
+      randomTop=Math.random()*800;
       dom.style.opacity=1
         if(randomLeft>maxWidth){
           dom.style.left=maxWidth+100+"px"
@@ -213,7 +213,7 @@
         }else{
           dom.style.top=randomTop+"px"
         }
-      },1000)
+      },2000)
 
     }
     // window.onload=function(){
@@ -227,7 +227,7 @@
         }
         initScene(textArray[i])
         i++
-      }, 5000);
+      }, 10000);
     // }
     window.addEventListener("resize",function(){
       initScene('ლ(╹◡╹ლ)')
