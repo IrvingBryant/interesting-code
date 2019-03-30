@@ -164,6 +164,18 @@
         font-size: 12px; 
     }
 }
+#button-box{
+  width: 32px;
+  height:32px;
+  /* text-align: center; */
+  /* line-height: 40px; */
+  position: absolute;
+  bottom: 200px;
+  background-image:url('./assets/img/猪头.png');
+  left: 50%;
+  transform: translateX(-50%);
+  background-size:100% 100%; 
+}
 </style>
 
 <body>
@@ -181,6 +193,7 @@
     <canvas id="canvas"></canvas>
     <h1 id="headline">hey丁素娟</h1>
     <img id="box"></img>
+    <div id="button-box">NEXT</div>
   </section>
 
   <!-- COIDEA:demo END -->
@@ -192,6 +205,17 @@
     imgTimer=null,
     timer=null ,
     flag=false;
+    var buttonBtn = document.getElementById('button-box');
+    buttonBtn.style.top = window.innerHeight-70 + 'px'
+    buttonBtn.onclick=function(){
+      if(i>textArray.length-1){
+        flag=true
+        amin()
+        return
+      }
+      initScene(textArray[i])
+      i++
+    }
     function amin(){
       let maxWidth = window.innerWidth,
       maxHeight = window.innerHeight;
@@ -218,18 +242,19 @@
     }
     // window.onload=function(){
       initScene('hey丁素娟')
-      timer = setInterval(function() {
-        if (i > textArray.length - 1) {
-          flag=true
-          clearInterval(timer)
-          amin()
-          return
-        }
-        initScene(textArray[i])
-        i++
-      }, 10000);
+        // timer = setInterval(function() {
+        //   if (i > textArray.length - 1) {
+        //     flag=true
+        //     clearInterval(timer)
+        //     amin()
+        //     return
+        //   }
+        //   initScene(textArray[i])
+        //   i++
+        // }, 10000);
     // }
     window.addEventListener("resize",function(){
+      buttonBtn.style.top = window.innerHeight-70 + 'px'
       initScene('ლ(╹◡╹ლ)')
       if(flag){
         amin()
