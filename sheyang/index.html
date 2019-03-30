@@ -199,7 +199,7 @@
       console.log('maxHeight',maxHeight)
       var dom = document.getElementById('box')
       clearInterval(imgTimer)
-      imgTimer=setInterval(()=>{
+      imgTimer=setInterval(function(){
       var randomLeft=Math.random()*800,
       randomTop=Math.random()*800;
       dom.style.opacity=1
@@ -218,7 +218,7 @@
     }
     // window.onload=function(){
       initScene('hey丁素娟')
-      timer = setInterval(() => {
+      timer = setInterval(function() {
         if (i > textArray.length - 1) {
           flag=true
           clearInterval(timer)
