@@ -28,7 +28,7 @@ var canvas = document.querySelector('#canvas'),
     });
     var clickTime=0, //点击次数
         splitCount=0,
-        content="小魏无羡想不到吧惊不惊喜意不意外",
+        content="南有乔木不可休思汉有游女不可求思汉之广矣不可泳思江之永矣不可方思",
         lastsplitCount=0,
         timer,
         i=6;
@@ -40,7 +40,7 @@ var canvas = document.querySelector('#canvas'),
       timer=setInterval(function(){
           if(i<=0){
             clearInterval(timer);
-            window.location.href = "http://htmlpreview.github.io/?https://github.com/IrvingBryant/learngit/blob/master/ouYang1/indextwo.html";
+            window.location.href = "http://htmlpreview.github.io/?https://github.com/IrvingBryant/interesting-code/blob/master/ouYang1/indextwo.html";
           }else{
            i--
            document.querySelector('#txt').value =i
